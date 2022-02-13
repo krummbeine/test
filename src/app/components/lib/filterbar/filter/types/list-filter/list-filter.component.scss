@@ -1,0 +1,13 @@
+:host {
+  flex-grow: 1;
+  display: flex;
+
+  & > * {
+    width: 100%;
+  }
+}
+
+fa-icon {
+  margin: 0 10px;
+  min-width: 15px;
+}

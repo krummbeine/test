@@ -1,0 +1,25 @@
+<mat-form-field appearance="fill">
+
+  <mat-label>
+    {{ label | translate }}
+  </mat-label>
+
+  <mat-select [(ngModel)]="selectedValues"
+              [multiple]="multiselect">
+
+    <mat-option *ngIf="!multiselect"
+                [value]="">
+      {{ 'DeleteFilter' | translate }}
+    </mat-option>
+
+    <mat-option *ngFor="let entry of listEntries"
+                [value]="entry.value">
+
+      <fa-icon class="icon" [icon]="entry.icon"></fa-icon>
+
+      {{ entry.value.toString() | translate }}
+
+    </mat-option>
+  </mat-select>
+
+</mat-form-field>

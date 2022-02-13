@@ -1,0 +1,14 @@
+:host {
+  width: 100%;
+  display: block;
+  border-radius: 8px 8px 0px 0px;
+  box-shadow: 0 0 5px rgba(0, 0, 5, 0.3);
+}
+
+.filters, .chips {
+  display: flex;
+}
+
+.chips {
+  width: 100%;
+}

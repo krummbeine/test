@@ -1,0 +1,34 @@
+<mat-form-field class="example-chip-list"
+                *ngIf="chips && chips.length > 0"
+                appearance="fill">
+
+  <mat-label>
+    {{ 'YourSelection' | translate }}
+  </mat-label>
+
+  <mat-chip-list #chipList
+                 [attr.aria-label]="'YourSelection' | translate">
+    <mat-chip *ngFor="let chip of chips"
+              (removed)="this.removeChip(chip.key)">
+
+      {{ 'key.' + chip.key | translate }}:
+
+      <ng-container class="chip-entry"
+                    *ngIf="!isArray(chip.value)">
+        {{ chip.value | translate }}
+      </ng-container>
+
+      <ng-container *ngIf="isArray(chip.value)">
+          <span class="chip-entry"
+                *ngFor="let entry of chip.value">
+            {{ entry | translate }}
+          </span>
+      </ng-container>
+
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+
+    </mat-chip>
+  </mat-chip-list>
+</mat-form-field>

@@ -1,0 +1,30 @@
+[
+  {
+    "value": "EUR",
+    "icon": [
+      "fas",
+      "euro-sign"
+    ]
+  },
+  {
+    "value": "GBP",
+    "icon": [
+      "fas",
+      "sterling-sign"
+    ]
+  },
+  {
+    "value": "USD",
+    "icon": [
+      "fas",
+      "dollar-sign"
+    ]
+  },
+  {
+    "value": "BTC",
+    "icon": [
+      "fas",
+      "bitcoin-sign"
+    ]
+  }
+]

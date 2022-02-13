@@ -1,0 +1,28 @@
+{
+  "Equity": "Eigenkapital",
+  "Closed-endFund": "Geschlossener Fond",
+  "BankAccount": "Bankkonto",
+  "DirectHolding": "Direct Holding",
+  "Generic": "Allgemein",
+  "Collectible": "Sammlerstück",
+  "Loan": "Darlehen",
+  "RealEstate": "Immobilie",
+
+  "key": {
+    "name": "Name",
+    "types": "Typ",
+    "currencies": "Währung",
+    "isPrivate": "Privat"
+  },
+
+  "true": "Ja",
+  "false": "Nein",
+  "DeleteFilter": "Filter löschen",
+  "YourSelection": "Ihre Auswahl",
+  "NoData": "Keine Ergebnisse gefunden",
+  "SelectPage": "Seite auswählen",
+
+  "currency": "Währung",
+  "type": "Typ",
+  "name": "Name"
+}

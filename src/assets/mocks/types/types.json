@@ -1,0 +1,58 @@
+[
+  {
+    "value": "Equity",
+    "icon": [
+      "fas",
+      "scale-balanced"
+    ]
+  },
+  {
+    "value": "Closed-endFund",
+    "icon": [
+      "fas",
+      "coins"
+    ]
+  },
+  {
+    "value": "BankAccount",
+    "icon": [
+      "fas",
+      "building-columns"
+    ]
+  },
+  {
+    "value": "DirectHolding",
+    "icon": [
+      "fas",
+      "hand-holding-dollar"
+    ]
+  },
+  {
+    "value": "Generic",
+    "icon": [
+      "fas",
+      "shapes"
+    ]
+  },
+  {
+    "value": "Collectible",
+    "icon": [
+      "fas",
+      "object-group"
+    ]
+  },
+  {
+    "value": "Loan",
+    "icon": [
+      "fas",
+      "signature"
+    ]
+  },
+  {
+    "value": "RealEstate",
+    "icon": [
+      "fas",
+      "hotel"
+    ]
+  }
+]

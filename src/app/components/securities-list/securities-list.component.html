@@ -1,0 +1,55 @@
+﻿
+<qp-securities-filter [securityFilter]="securityFilter"
+                      [currencies]="(currencies$ | async)"
+                      [types]="(types$ | async)"
+                      (valuesChange)="onFilterChange($event)"
+                      qp-filter-bar></qp-securities-filter>
+
+<qp-pagination [paging]="securityFilter"
+               [totalHits]="(securitiesResult$ | async)?.totalHits"
+               (paginationChange)="onPagingChange($event)">
+  <filterable-table
+    class="security-list"
+    [dataSource]="(securitiesResult$ | async)?.securities"
+    [isLoading]="loadingSecurities$ | async">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ 'name' | translate }}
+      </th>
+      <td mat-cell *matCellDef="let security">
+        {{ security.name }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ 'type' | translate }}
+      </th>
+      <td mat-cell *matCellDef="let security">
+        {{ security.type | translate }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="currency">
+      <th mat-header-cell *matHeaderCellDef>
+        {{ 'currency' | translate }}
+      </th>
+      <td mat-cell *matCellDef="let security">
+        {{ security.currency }}
+      </td>
+    </ng-container>
+
+    <!-- Custom row definitions to be provided to the wrapper table. -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data that will be provided to the wrapper table. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="3">
+        <i>{{ 'NoData' | translate }}</i>
+      </td>
+    </tr>
+
+  </filterable-table>
+</qp-pagination>

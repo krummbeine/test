@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <fa-icon [icon]="'dollar-sign'"></fa-icon>
+    <span>ecurities</span>
+
+    &nbsp;
+
+    <fa-icon [icon]="'pound-sign'"></fa-icon>
+    <span>ist</span>
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button
+            [class.transparent]="currentLanguage !== Language.English"
+            (click)="setLanguage(Language.English)"
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+      ENG
+    </button>
+
+    <button mat-icon-button
+            [class.transparent]="currentLanguage !== Language.German"
+            (click)="setLanguage(Language.German)"
+            class="example-icon"
+            aria-label="Example icon-button with share icon">
+      DEU
+    </button>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="security-list-wrapper">
+  <securities-list></securities-list>
+</div>

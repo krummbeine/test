@@ -1,0 +1,32 @@
+<qp-filter-bar>
+  <qp-string-filter qp-filter
+                    label="key.name"
+                    [(value)]="securityFilter.name"
+                    (valueChange)="emitChangeEvent()">
+  </qp-string-filter>
+
+  <qp-list-filter qp-filter
+                  label="key.types"
+                  [multiselect]="true"
+                  [listEntries]="types"
+                  [(selected)]="securityFilter.types"
+                  (selectedChange)="emitChangeEvent()"></qp-list-filter>
+
+  <qp-list-filter qp-filter
+                  label="key.currencies"
+                  [multiselect]="true"
+                  [listEntries]="currencies"
+                  [(selected)]="securityFilter.currencies"
+                  (selectedChange)="emitChangeEvent()"></qp-list-filter>
+
+  <qp-list-filter qp-filter
+                  label="key.isPrivate"
+                  [listEntries]="booleanIconListProps"
+                  [(selected)]="securityFilter.isPrivate"
+                  (selectedChange)="emitChangeEvent()"></qp-list-filter>
+
+  <qp-chips qp-filter-chips
+            [hideFilters]="[ 'skip', 'limit' ]"
+            (filterSelectionChange)="emitChangeEvent($event)"
+            [filterSelection]="securityFilter"></qp-chips>
+</qp-filter-bar>

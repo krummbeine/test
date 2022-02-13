@@ -1,0 +1,28 @@
+{
+  "Equity": "Equity",
+  "Closed-endFund": "Closed-endFund",
+  "BankAccount": "Bank Account",
+  "DirectHolding": "Direct Holding",
+  "Generic": "Generic",
+  "Collectible": "Collectible",
+  "Loan": "Loan",
+  "RealEstate": "Real Estate",
+
+  "key": {
+    "name": "Name",
+    "types": "Types",
+    "currencies": "Currencies",
+    "isPrivate": "Private"
+  },
+
+  "true": "Yes",
+  "false": "No",
+  "DeleteFilter": "Delete filter",
+  "YourSelection": "Your selection",
+  "NoData": "No data found",
+  "SelectPage": "Select Page",
+
+  "currency": "Currency",
+  "type": "Type",
+  "name": "Name"
+}
